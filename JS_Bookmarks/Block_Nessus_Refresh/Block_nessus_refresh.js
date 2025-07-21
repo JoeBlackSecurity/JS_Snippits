@@ -1,0 +1,1 @@
+javascript:(function(){if(!location.href.includes("scans")){console.log("⛔ _Rest.GET block scans (not in vulnerabilities page).");return;}console.log("🚫 Starting _Rest.GET block...");if(typeof _Rest!=="undefined"){_Rest.GET=function(route,opts){console.warn("Blocked _Rest.GET to",route);if(opts?.always)opts.always({});return null;};}})();
